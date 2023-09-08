@@ -13,13 +13,13 @@ app.use(express.json());
 
 //Middleware for handling CORS policy
 //option 1: Allow All origins with default of cors(*)
-app.use(cors());
+// app.use(cors());
 //option 2: Allow custom origins
-// app.use(cors({
-//     origin: 'http://localhost:3000',
+app.use(cors({
+    origin: 'https://books-store-frontend-k1dz.onrender.com',
 //     method: ['GET', 'POST', 'PUT', 'DELETE'],
 //     allowedHeaders: ['Content-Type'],
-// }));
+}));
 
 
 app.get("/", (request, response) => {

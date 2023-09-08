@@ -21,7 +21,7 @@ app.use(express.json());
 //     allowedHeaders: ['Content-Type'],
 // }));
 
-app.use(cors({ Origin: true }}));
+// app.use(cors({ Origin: true }}));
 
 
 app.get("/", (request, response) => {

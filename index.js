@@ -15,11 +15,13 @@ app.use(express.json());
 //option 1: Allow All origins with default of cors(*)
 // app.use(cors());
 //option 2: Allow custom origins
-app.use(cors({
-    origin: 'https://books-store-frontend-k1dz.onrender.com',
-    method: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
-}));
+// app.use(cors({
+//     origin: 'https://books-store-frontend-k1dz.onrender.com',
+//     method: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type'],
+// }));
+
+app.use(cors({ Origin: true }}));
 
 
 app.get("/", (request, response) => {
